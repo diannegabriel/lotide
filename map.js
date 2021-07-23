@@ -35,18 +35,18 @@ const map = function(array, callback) {
 const assertArraysEqual = function(array1, array2) {
   // I assert that these two arrays are Equal (array1, array2)
     if (eqArrays(array1, array2)) {
-      console.log(`✅ Assertion Passed!`)
+      console.log(`✅ Assertion Passed! ${array1} === ${array2}`)
     } else {
-      console.log(`🛑 Assertion Failed.`)
+      console.log(`🛑 Assertion Failed. ${array1} !== ${array2}`)
     }
   };
 
 const results1 = map(words, word => word[0]);
 console.log(results1);
 
-assertArraysEqual(eqArrays(results1, [ 'g', 'c', 't', 'm', 't' ]), true)
+assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ])
 
 const results2 = map(creams, cream => cream.length);
 console.log(results2);
 
-assertArraysEqual(eqArrays(results2, [ 5, 9, 7, 10, 9 ]), true)
+assertArraysEqual(results2, [ 5, 9, 7, 10, 9 ])

@@ -8,16 +8,39 @@ const assertEqual = function(actual, expected) {
 }; 
 
 const findKeyByValue = function (obj, show) { 
+  // let showList = Object.entries(obj)
+  // let entry = {};
+  // let entryArr = []
+  
   let genreList = Object.keys(obj)
   let genre;
 
   for (let i = 0; i < genreList.length; i++) {
     if (show === obj[genreList[i]]) {
+
+      // console.log(`Is ${obj[genreList[i]]} a ${genreList[i]}?`)
+      // console.log(genreList[i])
+
+      // genre = genreList[i];
+      // console.log(genre)
+
+      // entry[genreList[i]] = obj[genreList[i]];
+      // console.log(entry)
+
+      // console.log(entry)
+      // entryArr.push(showList[i])
+      // console.log(entryArr)
+      // console.log(Object.entries(entry))
+      
+      // console.log(obj[entry]+' \n');
+      // console.log(obj[genreList[i]])
+      // console.log(genreList[i])
+      // console.log(obj[genreList])
       genre = genreList[i]
     }
 
   }
-  console.log(genre)
+  // console.log(genre)
   return genre
 }
 

@@ -16,6 +16,8 @@ const countOnly = function(allItems, itemsToCount) {
     for (let j = 0; j < allItems.length; j++) {
       if (names[i] === allItems[j] && itemsToCount[names[i]] === true) {
         total[names[i]] = ++k;
+        console.log(total)
+        console.log()
         break
       }
     }
