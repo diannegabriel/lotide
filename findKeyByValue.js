@@ -1,9 +1,6 @@
 const assertEqual = require('./assertEqual');
 
 const findKeyByValue = function (obj, show) { 
-  // let showList = Object.entries(obj)
-  // let entry = {};
-  // let entryArr = []
   
   let genreList = Object.keys(obj)
   let genre;
@@ -16,7 +13,6 @@ const findKeyByValue = function (obj, show) {
   }
   return genre
 }
-
 
 const bestTVShowsByGenre = { 
   sci_fi: "The Expanse",
