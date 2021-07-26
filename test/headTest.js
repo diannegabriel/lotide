@@ -3,15 +3,10 @@ const assert = chai.assert;
 
 const head = require('../head');
 
-// describe("head true", function() { // 3
+const array = [5,6,7]
+const headTest = head(array)
+console.log(headTest);
 
-//   it(" return true if first element is equal to expected", function() {
 
-
-
-//   });
-
-// });
-
-head([5,6,7]), 5;
-head(["Hello", "Lighthouse", "Labs"]), "Hello";
+// const array = [5,6,7];
+// const array = ["Hello", "Lighthouse", "Labs"]
