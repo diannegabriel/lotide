@@ -1,15 +1,5 @@
-const eqArrays = function(array1, array2) {
-  return Array.isArray(array1) && 
-    Array.isArray(array2) &&
-    array1.length === array2.length &&
-    array1.every((val, index) => val === array2[index]);
-};
-
-const assertArraysEqual = function(array1, array2) {
-  (eqArrays(array1, array2) === true) ? 
-  console.log(`✅ Assertion Passed! ${array1} === ${array2}`)
-  : console.log(`🛑 Assertion Failed. ${array1} !== ${array2}`)
-}; 
+const assertArraysEqual = require('./assertArraysEqual');
+const eqArrays = require('./eqArrays');
 
 //return all the indices (zero-based positions) in 
 // the string where each character is found
@@ -42,3 +32,5 @@ letterPositions("lighthouse in the house")
 letterPositions("abc")
 
 assertArraysEqual(letterPositions("hello").e, [1]);
+
+module.exports = letterPositions;

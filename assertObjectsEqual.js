@@ -98,3 +98,5 @@ assertEqual(eqObjects(cd, cd2), false);
 
 
 assertObjectsEqual(cd, dc);
+
+module.exports = assertObjectsEqual;
