@@ -42,5 +42,5 @@ The following functions are currently implemented:
 * `map`: When given an array and a condition, this function iterates through the array and returns the result of the condition for each element
 * `middle`: When given an array, this function returns the element/s in the middle
 * `tail`: When given an array, this function returns the same element but without the first element
-* `takeUntil`: When given an array and a condition, this function will return the elements in an array until it meets its condition
-* `without`: When given an array of strings and a word, this function returns an array with all the elements except for the given word
+* `takeUntil`: When given an array and a callback function, this function will return the elements in an array with the help of callback function's conditions
+* `without`: When given an array of strings and word/s, this function returns an array with all the elements except for the given word/s
