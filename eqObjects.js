@@ -31,22 +31,32 @@ const eqObjects = function(object1, object2) {
   const obj1Keys = Object.keys(object1)
   const obj2Keys = Object.keys(object2)
 
+  // Check the length of both objects (in array form)
+  // Returns false when one array is longer than the other
   if (obj2Keys.length !== obj1Keys.length) {
     return false;
   }
 
-    for (const i of obj1Keys) {
+  // Loops over object1 keys.
+  for (const i of obj1Keys) {
+    // console.log(object1)
+    // console.log(object2)
+    // console.log(object1[i])
+    // console.log(object2[i])
+    
+    if (Array.isArray(object1[i])) {
+      let result = eqArrays(object1[i], object2[i]);
+        if (result !== true) {
+          
+          return false
+        }
+      // console.log(`It matches! ${object1[i]} === ${object2[i]}`)
 
-      if (Array.isArray(object1[i])) {
-        let result = eqArrays(object1[i], object2[i]);
-          if (result !== true) {
-            return false
-          }
-        console.log(`It matches! ${object1[i]} === ${object2[i]}`)
-      } else if (object1[i] !== object2[i]) {
-        console.log(`It doesn not match! ${object1[i]} !== ${object2[i]}`)
-        return false
-      }
+    } else if (object1[i] !== object2[i]) {
+
+      // console.log(`It doesn not match! ${object1[i]} !== ${object2[i]}`)
+      return false
+    }
     
   }
 
@@ -59,7 +69,7 @@ eqObjects(ab, ba); // => true
 assertEqual(eqObjects(ab, ba), true); // => true
 
 const bc = { b: "1", c: "2" };
-const cb = { d: "2", d: "2" };
+const cb = { c: "2", d: "1" };
 eqObjects(bc, cb); // => false
 assertEqual(eqObjects(bc, cb), false); // => false
 
